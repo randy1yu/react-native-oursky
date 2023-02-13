@@ -1,4 +1,5 @@
 rootProject.name = 'reactnativeourskyexample'
+apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
 include ':react-native-dialogs'
 project(':react-native-dialogs').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-dialogs/android')
 include ':react-native-open-settings'
@@ -9,3 +10,4 @@ include ':rn-sim-info'
 project(':rn-sim-info').projectDir = new File(rootProject.projectDir, '../node_modules/rn-sim-info/android')
 
 include ':app'
+includeBuild('../node_modules/react-native-gradle-plugin')
